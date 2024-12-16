@@ -6,6 +6,8 @@ include(GNUInstallDirs)
 
 find_package(Pikachu REQUIRED)
 
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
+
 add_library(charmander SHARED charmander.cpp)
 
 target_include_directories(charmander

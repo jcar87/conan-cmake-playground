@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.28)
 project(pikachu LANGUAGES CXX)
 include(GNUInstallDirs)
 
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
+
 add_library(pikachu SHARED pikachu.cpp)
 
 target_include_directories(pikachu
