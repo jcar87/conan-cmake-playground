@@ -6,7 +6,7 @@ import os
 class pikachuRecipe(ConanFile):
     name = "charmander"
     version = "1.0"
-    package_type = "shared-library"
+    package_type = "header-library"
 
     # Binary configuration
     settings = "os", "compiler", "build_type", "arch"
@@ -37,6 +37,6 @@ class pikachuRecipe(ConanFile):
         rmdir(self, os.path.join(self.package_folder, "lib", "cmake"))
 
     def package_info(self):
-        self.cpp_info.libs = ["charmander"]
+        self.cpp_info.libs = []
         self.cpp_info.set_property("cmake_file_name", "Charmander")
         self.cpp_info.set_property("cmake_target_name", "Charmander::charmander")

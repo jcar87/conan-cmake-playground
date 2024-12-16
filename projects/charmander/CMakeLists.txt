@@ -8,15 +8,14 @@ find_package(Pikachu REQUIRED)
 
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 
-add_library(charmander SHARED charmander.cpp)
+add_library(charmander INTERFACE)
 
 target_include_directories(charmander
-    PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    INTERFACE
         $<INSTALL_INTERFACE:include> # see below
 )
 
-target_link_libraries(charmander PRIVATE Pikachu::pikachu)
+target_link_libraries(charmander INTERFACE Pikachu::pikachu)
 
 target_sources(charmander
     PUBLIC
