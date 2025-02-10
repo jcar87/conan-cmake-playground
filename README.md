@@ -149,3 +149,14 @@ Dynamic section at offset 0x2d50 contains 31 entries:
  0x000000000000000c (INIT)               0x1000
  0x000000000000000d (FINI)               0x130c
 ```
+
+#### LATEST PR for incubating CMakeDeps
+
+```
+[100%] Linking CXX executable hello
+/opt/cmake-3.30.5-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/hello.dir/link.txt --verbose=1
+/usr/bin/c++ -m64 -O3 -DNDEBUG -m64 CMakeFiles/hello.dir/print_hello.cpp.o -o hello  
+-Wl,-rpath,/home/diegor/.conan2/p/b/bulbac8139c5804aac/p/lib:/home/diegor/.conan2/p/b/charma6ae9001b3b66/p/lib:/home/diegor/.conan2/p/b/pikaccddcbcddba2f9/p/lib 
+/home/diegor/.conan2/p/b/bulbac8139c5804aac/p/lib/libbulbasaur.so 
+-Wl,-rpath-link,/home/diegor/.conan2/p/b/charma6ae9001b3b66/p/lib:/home/diegor/.conan2/p/b/pikaccddcbcddba2f9/p/lib
+```
